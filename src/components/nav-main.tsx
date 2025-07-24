@@ -28,7 +28,7 @@ export function NavMain({
           <SidebarMenuItem className="flex items-center gap-2">
             <SidebarMenuButton
               tooltip="Quick Create"
-              className="bg-primary cursor-pointer text-primary-foreground hover:bg-primary/90 hover:text-primary-foreground active:bg-primary/90 active:text-primary-foreground min-w-8 duration-200 ease-linear"
+              className="bg-primary cursor-pointer hover:bg-primary/90 hover:text-white text-white active:bg-primary/90 active:scale-105 min-w-8 transition-all duration-200 ease-linear"
             >
               <IconCirclePlusFilled />
               <span>Stwórz plan podróży</span>
@@ -39,8 +39,8 @@ export function NavMain({
           {items.map((item) => (
               <SidebarMenuItem key={item.title}>
                 <SidebarMenuButton asChild>
-                  <Link href={item.url}>
-                    {item.icon && <item.icon />}
+                  <Link className='group relative inline-flex items-center overflow-hidden' href={item.url}>
+                    {item.icon && <item.icon className='dark:text-indigo-300 text-indigo-500' />}
                     <span>{item.title}</span>
                   </Link>
                 </SidebarMenuButton>
