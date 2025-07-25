@@ -27,11 +27,15 @@ export function NavMain({
         <SidebarMenu>
           <SidebarMenuItem className="flex items-center gap-2">
             <SidebarMenuButton
-              tooltip="Quick Create"
+                asChild
+              tooltip="Stwórz plan podróży"
               className="bg-primary cursor-pointer hover:bg-primary/90 hover:text-white text-white active:bg-primary/90 active:scale-105 min-w-8 transition-all duration-200 ease-linear"
             >
-              <IconCirclePlusFilled />
-              <span>Stwórz plan podróży</span>
+              <Link
+                  href='/dashboard/new-trip-idea'>
+                <IconCirclePlusFilled />
+                <span>Stwórz plan podróży</span>
+              </Link>
             </SidebarMenuButton>
           </SidebarMenuItem>
         </SidebarMenu>
