@@ -4,7 +4,7 @@ import {SiteHeader} from "@/components/site-header";
 const Page = () => {
     return (
         <>
-            <SiteHeader title='Ustawienia' />
+            <SiteHeader title='Ustawienia aplikacji' />
             <p>DASH</p>
         </>
     );
